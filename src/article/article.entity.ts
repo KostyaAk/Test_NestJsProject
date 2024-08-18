@@ -16,4 +16,7 @@ export class Article {
 
     @Column()
     author: string;
+
+    @Column({ default: null })
+    color: string;
 }

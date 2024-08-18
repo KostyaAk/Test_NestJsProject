@@ -8,11 +8,13 @@ import { RegisterDto } from './dto/register.dto';
 export class AuthController {
     constructor(private authService: AuthService) { }
 
+    // Регистрация пользователя по имейлу и паролю
     @Post('/register')
     async register(@Body() registerDto: RegisterDto) {
         return await this.authService.createUser(registerDto);
     }
 
+    // Вход пользователя по имейлу и паролю
     @Post('/login')
     async login(@Body() loginDto: LoginDto) {
         return await this.authService.login(loginDto);

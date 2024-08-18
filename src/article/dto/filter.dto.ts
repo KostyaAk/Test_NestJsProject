@@ -11,5 +11,5 @@ export class FilterDto {
 
     @IsOptional()
     @IsDateString()
-    date_public?: string; // Используем строку в формате ISO для даты
+    date_public?: string; // например "2024-05-13"
 }
